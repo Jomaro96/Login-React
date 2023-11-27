@@ -1,0 +1,125 @@
+#container{
+  
+    height: 100%;
+
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center; /* Add this line */
+    height: 100vh;
+}
+
+#box1{
+border-top: 3px solid #254e70;
+border-bottom: 3px solid #254e70;
+border-left: 3px solid #254e70;
+width: 20%;
+display: grid;
+align-items: center;
+padding-left: 10px;
+padding-right: 10px;
+color: white;
+background-color: #254e70;
+border-radius: 10px 0px 0px 10px;
+}
+
+#box2{
+    border-top: 3px solid #254e70;
+    border-bottom: 3px solid #254e70;
+    border-right: 3px solid #254e70;
+    width: 35%;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    color: #37718E;
+    background-color: #fff;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+.test-1{
+
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.child_container{
+    height: 400px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.input_index {
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 16px;
+    width: 60%;
+}
+.input_index::placeholder{
+    color: #999;
+}
+.input_index:focus{
+    border-color: #8EE3EF; /* Change the border color on focus */
+    outline: none;
+}
+.span_index{
+    font-size: 16px;
+}
+
+.button_index{
+    background-color: #254E70;
+    color: #fff;
+    border: 2px solid #8EE3EF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.button_index:hover{
+    background-color: #8EE3EF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+ 
+    background: linear-gradient(to bottom, #8EE3EF, #254e70);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+/*HORIZONTAL NAV*/
+nav {
+    background-color: #254E70;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  /*HORIZONTAL NAV*/
