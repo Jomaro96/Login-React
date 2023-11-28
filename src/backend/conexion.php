@@ -1,10 +1,10 @@
 <?php
 
 function connect() {
-$dbhost = "";
-$dbuser = "";
-$dbpass = "";
-$dbname = "";
+	$dbhost = "localhost";
+	$dbuser = "root";
+	$dbpass = "";
+	$dbname = "portfolio";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if (!$conn)
 {

@@ -1,13 +1,28 @@
 import { useContext, createContext, useState, useEffect } from "react";
 
-const AuthContext = createContext({
- isAuthenticated: false,
-}); //Es utilizado para manejar estados de forma global
+export const AuthContext = createContext(); 
 
 export function AuthProvider({children}){
-    const [isAuthenticated,setIsAuthenticated] = useState(false);
+    
+    const [isAuthenticated,setIsAuthenticated] = useState(
+        () => localStorage.getItem('isAuthenticated') === 'true'
+    );
+    
+    useEffect(() => {
+        // Update local storage when isAuthenticated changes
+        localStorage.setItem('isAuthenticated', isAuthenticated);
+      }, [isAuthenticated]);
 
-    return <AuthContext.Provider value={{isAuthenticated}}>{children}</AuthContext.Provider>
+    const login = () => {
+        setIsAuthenticated(true);
+      };
+    
+      const logout = () => {
+        setIsAuthenticated(false);
+      };
+
+    return <AuthContext.Provider value={{isAuthenticated, login, logout}}>{children}</AuthContext.Provider>
 }
+
 
 export const useAuth = () => useContext(AuthContext); //Guarda el contexto de forma global
